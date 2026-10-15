@@ -36,5 +36,5 @@ export const contactSchema = z.object({
   website: z.string().max(0).optional(),
 });
 export function pageHead(title: string, description: string, image?: string) {
-  return { meta: [{ title }, { name: 'description', content: description }, { property: 'og:title', content: title }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }, ...(image ? [{ property: 'og:image', content: image }, { name: 'twitter:image', content: image }] : [])] };
+  return { meta: [{ title }, { name: 'description', content: description }, { property: 'og:title', content: title }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }, ...(image?.startsWith('https://') ? [{ property: 'og:image', content: image }, { name: 'twitter:image', content: image }] : [])] };
 }
