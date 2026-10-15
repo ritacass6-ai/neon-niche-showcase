@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const whatsappUrl = 'https://wa.me/5521980473591?text=' + encodeURIComponent('Olá, Rita! Gostaria de conversar sobre um site para meu negócio.');
-export const groups = [
+export const groups: { title: string; icon: string; niches: [string, string][] }[] = [
   { title: 'Corporativo & serviços', icon: 'briefcase', niches: [
     ['Jurídico & Advocacia', 'Landing pages elegantes, alinhadas ao código da OAB, com mapas e blog.'],
     ['Contabilidade & Finanças', 'Sites corporativos com foco em abertura de empresas e consultoria.'],
