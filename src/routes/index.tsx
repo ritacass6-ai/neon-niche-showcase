@@ -1,24 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
-});
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+import { createFileRoute, Link } from '@tanstack/react-router';
+import { ArrowRight, ArrowUpRight, Zap, ShieldCheck, Smartphone, Check, CodeXml, Target, BriefcaseBusiness, HeartPulse, Store, Rocket } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ProjectGallery } from '@/components/project-gallery';
+import { ContactCTA } from '@/components/portfolio-shell';
+import { pageHead, groups } from '@/lib/portfolio';
+import workspace from '@/assets/workspace.asset.json';
+export const Route = createFileRoute('/')({ head: () => pageHead('Rita Maciel | Sites e landing pages de alta conversão', 'Desenvolvimento web com estratégia, design premium e inteligência artificial. Sites e landing pages personalizados para seu negócio.', workspace.url), component: Index });
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+ const icons = [BriefcaseBusiness, HeartPulse, Store, Rocket];
+ return <main><section className="hero"><img className="hero-photo" src={workspace.url} alt="Código de desenvolvimento web em um notebook"/><div className="container-page hero-content reveal"><div className="eyebrow"><span className="eyebrow-line"/> Estratégia. Design. Tecnologia.</div><h1>Sites & landing pages<br/>que transformam<br/><span className="gradient-text">cliques em clientes.</span></h1><p className="hero-description">Olá, sou <strong className="text-foreground font-medium">Rita Maciel.</strong> Desenvolvedora web que une design premium, inteligência artificial e estratégia para fazer seu negócio crescer no digital.</p><div className="hero-actions"><Button variant="premium" asChild><Link to="/contato">Quero impulsionar meu negócio <ArrowUpRight/></Link></Button><Button variant="glass" asChild><Link to="/solucoes">Explorar soluções <ArrowRight/></Link></Button></div><div className="hero-trust"><span><Check/> Design sob medida</span><span><Check/> Alta performance</span><span><Check/> Foco em conversão</span></div></div><div className="hero-note"><i className="status-dot"/> Tecnologia com um toque humano.</div></section><section className="capability-band"><div className="container-page capability-inner">{[{ icon:Zap,title:'Desenvolvimento ágil',text:'Da ideia ao digital, sem complicação' },{ icon:Target,title:'Foco em resultados',text:'Cada detalhe pensado para converter' },{ icon:Smartphone,title:'Perfeito em qualquer tela',text:'Uma experiência fluida no seu celular' },{ icon:ShieldCheck,title:'Tecnologia & segurança',text:'Uma base sólida para o seu negócio' }].map(({icon:Icon,title,text}) => <div className="capability-item" key={title}><Icon/><div><b>{title}</b><small>{text}</small></div></div>)}</div></section><section className="container-page section scroll-reveal"><div className="section-heading"><div><div className="eyebrow"><span className="eyebrow-line"/> Do conceito à experiência</div><h2>Design que impressiona.<br/><span className="text-muted-foreground">Estratégia que converte.</span></h2><p className="section-intro">Uma amostra do que podemos construir para o seu negócio.</p></div><Link className="text-link" to="/solucoes">Conheça as soluções por nicho <ArrowUpRight/></Link></div><ProjectGallery/></section><section className="niche-teaser"><div className="container-page section scroll-reveal"><div className="section-heading"><div><div className="eyebrow"><span className="eyebrow-line"/> Seu negócio, sua solução</div><h2>Não é só um site.<br/>É o seu próximo passo.</h2><p className="section-intro">Soluções pensadas para os desafios de cada mercado.</p></div><Link className="text-link" to="/solucoes">Explorar todos os nichos <ArrowUpRight/></Link></div><div className="niche-summary-grid">{groups.map((group,index) => { const Icon = icons[index] ?? CodeXml; return <Link className="niche-summary" to="/solucoes" key={group.title}><Icon/><h3>{group.title}</h3><p>{group.niches.length} segmentos · Soluções sob medida</p></Link>; })}</div></div></section><ContactCTA/></main>;
 }
