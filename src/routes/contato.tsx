@@ -1,0 +1,25 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { useServerFn } from '@tanstack/react-start';
+import { useState, type FormEvent } from 'react';
+import { ArrowUpRight, MessageCircle, CheckCircle2, LoaderCircle, LockKeyhole } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { contactSchema, niches, pageHead, whatsappUrl } from '@/lib/portfolio';
+import { submitContact } from '@/lib/contact.functions';
+export const Route = createFileRoute('/contato')({ validateSearch: (search: Record<string, unknown>) => ({ nicho: typeof search.nicho==='string' ? search.nicho : '' }), head: () => pageHead('Contato | Vamos criar seu projeto — Rita Maciel', 'Conte sobre seu negócio e solicite uma proposta para seu site ou landing page. Fale diretamente com Rita Maciel.'), component: Contact });
+function Contact() {
+ const { nicho }=Route.useSearch();
+ const submit=useServerFn(submitContact);
+ const [errors,setErrors]=useState<Record<string,string>>({});
+ const [pending,setPending]=useState(false);
+ const [success,setSuccess]=useState(false);
+ async function handleSubmit(event:FormEvent<HTMLFormElement>) {
+  event.preventDefault();
+  const form=event.currentTarget;
+  const result=contactSchema.safeParse(Object.fromEntries(new FormData(form)));
+  if(!result.success) { const next:Record<string,string>={}; result.error.issues.forEach(issue => { next[String(issue.path[0])]=issue.message; }); setErrors(next); return; }
+  setErrors({});setPending(true);
+  try { await submit({data:result.data}); setSuccess(true); } catch(error) { setErrors({submit:error instanceof Error ? error.message : 'Não foi possível enviar sua mensagem.'}); } finally {setPending(false);}
+ }
+ const field=(name:string,label:string,type:string,placeholder:string) => <div className="field"><label htmlFor={name}>{label}</label><input id={name} name={name} type={type} placeholder={placeholder} required maxLength={name==='nome'?100:name==='email'?255:25} autoComplete={name==='nome'?'name':name==='email'?'email':'tel'} aria-invalid={Boolean(errors[name])} aria-describedby={errors[name]?`${name}-error`:undefined}/>{errors[name]&&<span id={`${name}-error`} className="field-error">{errors[name]}</span>}</div>;
+ return <main className="container-page inner-page section"><div className="page-heading reveal"><div className="eyebrow"><span className="eyebrow-line"/> Vamos construir algo incrível</div><h1>Uma boa conversa.<br/><span className="gradient-text">Um grande próximo passo.</span></h1><p>Conte sobre o seu negócio. Vamos encontrar o melhor caminho para sua presença digital.</p></div><div className="contact-grid reveal"><aside className="contact-aside"><h2>Seu projeto começa<br/>por aqui.</h2><p>Seja um novo site, uma landing page ou uma solução personalizada, quero conhecer sua ideia e entender o que seu negócio precisa.</p><div className="contact-detail"><small>Prefere conversar diretamente?</small><a href={whatsappUrl} target="_blank" rel="noopener noreferrer">(21) 98047-3591</a></div><Button variant="glass" asChild size="lg"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle/> Conversar pelo WhatsApp <ArrowUpRight/></a></Button></aside>{success?<div className="form-success" role="status"><CheckCircle2/><h2>Mensagem recebida!</h2><p>Obrigada por compartilhar sua ideia. Seus dados foram enviados com sucesso para que possamos conversar sobre o seu projeto.</p><Button variant="glass" onClick={() => setSuccess(false)}>Enviar outra mensagem <ArrowUpRight/></Button></div>:<form className="contact-form" onSubmit={handleSubmit}><div className="form-row">{field('nome','Seu nome','text','Como você se chama?')}{field('email','E-mail','email','voce@empresa.com.br')}</div><div className="form-row">{field('whatsapp','WhatsApp','tel','(00) 00000-0000')}<div className="field"><label htmlFor="nicho">Seu segmento</label><select name="nicho" id="nicho" defaultValue={niches.includes(nicho)?nicho:''} required><option value="" disabled>Selecione seu nicho</option>{niches.map(name => <option key={name} value={name}>{name}</option>)}</select>{errors.nicho&&<span className="field-error">{errors.nicho}</span>}</div></div><div className="field"><label htmlFor="mensagem">Conte sobre seu projeto</label><textarea id="mensagem" name="mensagem" placeholder="Qual é sua ideia? O que você gostaria de construir?" required minLength={10} maxLength={2000}/>{errors.mensagem&&<span className="field-error">{errors.mensagem}</span>}</div><input className="hidden" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true"/>{errors.submit&&<p className="field-error" role="alert">{errors.submit}</p>}<Button variant="premium" size="lg" type="submit" disabled={pending}>{pending?<><LoaderCircle className="animate-spin"/> Enviando...</>:<>Vamos tirar sua ideia do papel <ArrowUpRight/></>}</Button><p className="form-privacy flex gap-2 items-start"><LockKeyhole size={13} className="shrink-0 mt-0.5"/>Seus dados serão usados apenas para conversar sobre seu projeto.</p></form>}</div></main>;
+}
