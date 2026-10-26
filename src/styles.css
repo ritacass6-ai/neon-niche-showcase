@@ -50,6 +50,6 @@ h1,h2,h3,h4 { font-family:var(--font-display); letter-spacing:0; } a { text-deco
 .hero-feature { position:relative; border:1px solid var(--border); border-radius:10px; overflow:hidden; box-shadow:0 40px 90px -30px oklch(.5 .22 293 / .5); }
 .hero-feature img { display:block; width:100%; height:440px; object-fit:cover; }
 .hero-feature:after { content:''; position:absolute; inset:0; background:linear-gradient(180deg, transparent 58%, oklch(.18 .006 286 / .8)); pointer-events:none; }
-.hero-feature .hero-note { right:auto; left:18px; bottom:18px; padding:9px 15px; border:1px solid var(--border); border-radius:999px; background:oklch(.2 .008 286 / .82); backdrop-filter:blur(6px); }
+.hero-feature .hero-note { display:flex; right:auto; left:18px; bottom:18px; padding:9px 15px; border:1px solid var(--border); border-radius:999px; background:oklch(.2 .008 286 / .82); backdrop-filter:blur(6px); }
 @media(max-width:900px) { .hero-inner { grid-template-columns:1fr; gap:34px; } .hero-feature img { height:250px; } }
 @media(max-width:600px) { .hero-feature img { height:200px; } .hero-feature .hero-note { font-size:9px; padding:7px 12px; } }
