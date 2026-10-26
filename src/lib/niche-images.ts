@@ -12,6 +12,7 @@ import mechanic from '@/assets/mechanic.asset.json';
 import beauty from '@/assets/beauty.asset.json';
 import workspace from '@/assets/workspace.asset.json';
 import education from '@/assets/education.asset.json';
+import customProject from '@/assets/custom.jpg.asset.json';
 export const nicheImages: Record<string, { url: string; alt: string }> = {
  'Jurídico & Advocacia': { url: office.url, alt: 'Escritório moderno com salas envidraçadas e tons sóbrios' },
  'Contabilidade & Finanças': { url: accounting.url, alt: 'Consultoria financeira e análise de documentos' },
@@ -29,3 +30,4 @@ export const nicheImages: Record<string, { url: string; alt: string }> = {
  'Infoprodutores & Palestrantes': { url: workspace.url, alt: 'Tecnologia digital em um notebook' },
  'Escolas & Cursos': { url: education.url, alt: 'Alunos e professora em uma sala de aula' },
 };
+export const customProjectImage = { url: customProject.url, alt: 'Tela escura com código de um site em desenvolvimento' };
