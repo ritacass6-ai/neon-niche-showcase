@@ -5,5 +5,7 @@
 - [x] Verify desktop/mobile navigation and interactions.
 - [x] Add professional cool-toned Unsplash photography to individual niche cards.
 - [x] Add photo to the "Projetos personalizados" card in Digital & educação.
+- [ ] Restore the original photo on "Projetos personalizados" (the swap was not requested).
+- [ ] Find the OTHER missing photo the user means: scan Home, Soluções, Quem somos and Contato for sections/cards without an image.
 - [ ] Domain connection and owner email setup: awaiting domain name and request to activate.
 - [x] Activate WhatsApp links using the owner's supplied number.
