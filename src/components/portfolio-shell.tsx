@@ -4,7 +4,7 @@ import { ArrowUpRight, CodeXml, Menu, MessageCircle, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { whatsappUrl } from '@/lib/portfolio';
 
-const nav = [{ to: '/', text: 'Home' }, { to: '/solucoes', text: 'Soluções por Nicho' }, { to: '/sobre', text: 'Sobre Mim' }, { to: '/contato', text: 'Contato' }] as const;
+const nav = [{ to: '/', text: 'Home' }, { to: '/solucoes', text: 'Soluções por Nicho' }, { to: '/sobre', text: 'Quem somos' }, { to: '/contato', text: 'Contato' }] as const;
 export function PortfolioHeader() {
  const [open, setOpen] = useState(false);
  const location = useLocation();
