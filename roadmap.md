@@ -6,6 +6,6 @@
 - [x] Add professional cool-toned Unsplash photography to individual niche cards.
 - [x] Add photo to the "Projetos personalizados" card in Digital & educação.
 - [x] Restore the original photo on "Projetos personalizados" (the swap was not requested).
-- [ ] Add a highlight photo to the Home page (hero destaque).
+- [x] Add a highlight photo to the Home page (hero destaque).
 - [ ] Domain connection and owner email setup: awaiting domain name and request to activate.
 - [x] Activate WhatsApp links using the owner's supplied number.
