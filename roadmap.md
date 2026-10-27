@@ -9,5 +9,5 @@
 - [x] Add a highlight photo to the Home page (hero destaque).
 - [x] Replace the testimonials page with a "Resultados" page (no invented client quotes; revisit real testimonials later).
 
-- [ ] Domain connection and owner email setup: awaiting domain name and request to activate.
+- [ ] Domain connection and owner email setup: celereweb.com.br (HostGator) identified; connect card declined, awaiting go-ahead. Site not published yet.
 - [x] Activate WhatsApp links using the owner's supplied number.
