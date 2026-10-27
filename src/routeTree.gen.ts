@@ -11,7 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContatoRouteImport } from './routes/contato'
-import { Route as DepoimentosRouteImport } from './routes/depoimentos'
 import { Route as ResultadosRouteImport } from './routes/resultados'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SolucoesRouteImport } from './routes/solucoes'
@@ -24,11 +23,6 @@ const IndexRoute = IndexRouteImport.update({
 const ContatoRoute = ContatoRouteImport.update({
   id: '/contato',
   path: '/contato',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DepoimentosRoute = DepoimentosRouteImport.update({
-  id: '/depoimentos',
-  path: '/depoimentos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResultadosRoute = ResultadosRouteImport.update({
@@ -50,7 +44,6 @@ const SolucoesRoute = SolucoesRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
-  '/depoimentos': typeof DepoimentosRoute
   '/resultados': typeof ResultadosRoute
   '/sobre': typeof SobreRoute
   '/solucoes': typeof SolucoesRoute
@@ -58,7 +51,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
-  '/depoimentos': typeof DepoimentosRoute
   '/resultados': typeof ResultadosRoute
   '/sobre': typeof SobreRoute
   '/solucoes': typeof SolucoesRoute
@@ -67,31 +59,21 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
-  '/depoimentos': typeof DepoimentosRoute
   '/resultados': typeof ResultadosRoute
   '/sobre': typeof SobreRoute
   '/solucoes': typeof SolucoesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    '/' | '/contato' | '/depoimentos' | '/resultados' | '/sobre' | '/solucoes'
+  fullPaths: '/' | '/contato' | '/resultados' | '/sobre' | '/solucoes'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contato' | '/depoimentos' | '/resultados' | '/sobre' | '/solucoes'
-  id:
-    | '__root__'
-    | '/'
-    | '/contato'
-    | '/depoimentos'
-    | '/resultados'
-    | '/sobre'
-    | '/solucoes'
+  to: '/' | '/contato' | '/resultados' | '/sobre' | '/solucoes'
+  id: '__root__' | '/' | '/contato' | '/resultados' | '/sobre' | '/solucoes'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContatoRoute: typeof ContatoRoute
-  DepoimentosRoute: typeof DepoimentosRoute
   ResultadosRoute: typeof ResultadosRoute
   SobreRoute: typeof SobreRoute
   SolucoesRoute: typeof SolucoesRoute
@@ -111,13 +93,6 @@ declare module '@tanstack/react-router' {
       path: '/contato'
       fullPath: '/contato'
       preLoaderRoute: typeof ContatoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/depoimentos': {
-      id: '/depoimentos'
-      path: '/depoimentos'
-      fullPath: '/depoimentos'
-      preLoaderRoute: typeof DepoimentosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/resultados': {
@@ -147,7 +122,6 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContatoRoute: ContatoRoute,
-  DepoimentosRoute: DepoimentosRoute,
   ResultadosRoute: ResultadosRoute,
   SobreRoute: SobreRoute,
   SolucoesRoute: SolucoesRoute,
