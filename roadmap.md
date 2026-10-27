@@ -7,7 +7,7 @@
 - [x] Add photo to the "Projetos personalizados" card in Digital & educação.
 - [x] Restore the original photo on "Projetos personalizados" (the swap was not requested).
 - [x] Add a highlight photo to the Home page (hero destaque).
-- [x] Add a "Depoimentos" page with sample testimonials (replace with real client quotes when provided).
+- [x] Replace the testimonials page with a "Resultados" page (no invented client quotes; revisit real testimonials later).
 
 - [ ] Domain connection and owner email setup: awaiting domain name and request to activate.
 - [x] Activate WhatsApp links using the owner's supplied number.
