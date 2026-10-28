@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { groups, pageHead } from '@/lib/portfolio';
 import { nicheImages, customProjectImage } from '@/lib/niche-images';
 import { ContactCTA } from '@/components/portfolio-shell';
-export const Route = createFileRoute('/solucoes')({ head: () => pageHead('Soluções por Nicho | Rita Maciel', 'Sites e landing pages sob medida para 15 segmentos de mercado, da advocacia à educação.'), component: Solutions });
+export const Route = createFileRoute('/solucoes')({ head: () => pageHead('Soluções por Nicho | CELEREWEB', 'Sites e landing pages sob medida para 15 segmentos de mercado, da advocacia à educação.'), component: Solutions });
 function Solutions() {
  const [active, setActive] = useState(0);
  const icons = [BriefcaseBusiness,HeartPulse,Store,Rocket];

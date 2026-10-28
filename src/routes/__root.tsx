@@ -79,9 +79,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rita Maciel | Desenvolvimento web" },
+      { title: "CELEREWEB | Desenvolvimento web" },
       { name: "description", content: "Sites e landing pages com estratégia, design e tecnologia." },
-      { name: "author", content: "Rita de Cássia Maciel Gomes" },
+      { name: "author", content: "CELEREWEB" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
