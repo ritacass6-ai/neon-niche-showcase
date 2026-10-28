@@ -1,6 +1,7 @@
 import office from '@/assets/office.asset.json';
 import accounting from '@/assets/accounting.asset.json';
 import architecture from '@/assets/architecture.asset.json';
+import realestate from '@/assets/realestate.jpg';
 import logistics from '@/assets/logistics.asset.json';
 import clinic from '@/assets/clinic.asset.json';
 import gym from '@/assets/gym.asset.json';
@@ -16,7 +17,7 @@ import customProject from '@/assets/custom.jpg.asset.json';
 export const nicheImages: Record<string, { url: string; alt: string }> = {
  'Jurídico & Advocacia': { url: office.url, alt: 'Escritório moderno com salas envidraçadas e tons sóbrios' },
  'Contabilidade & Finanças': { url: accounting.url, alt: 'Consultoria financeira e análise de documentos' },
- 'Mercado Imobiliário': { url: architecture.url, alt: 'Imóvel contemporâneo com arquitetura premium' },
+ 'Mercado Imobiliário': { url: realestate, alt: 'Residência contemporânea iluminada ao anoitecer, com piscina refletindo o céu azul' },
  'Logística & Transportadoras': { url: logistics.url, alt: 'Centro de distribuição e logística organizado' },
  'Arquitetura & Design': { url: architecture.url, alt: 'Projeto arquitetônico de uma residência moderna' },
  'Clínicas & Médicos': { url: clinic.url, alt: 'Clínica médica com iluminação limpa e ambiente acolhedor' },
