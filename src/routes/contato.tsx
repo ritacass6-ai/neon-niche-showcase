@@ -5,7 +5,7 @@ import { ArrowUpRight, MessageCircle, CheckCircle2, LoaderCircle, LockKeyhole } 
 import { Button } from '@/components/ui/button';
 import { contactSchema, niches, pageHead, whatsappUrl } from '@/lib/portfolio';
 import { submitContact } from '@/lib/contact.functions';
-export const Route = createFileRoute('/contato')({ validateSearch: (search: Record<string, unknown>): { nicho?: string } => typeof search['nicho']==='string' ? { nicho: search['nicho'] } : {}, head: () => pageHead('Contato | Vamos criar seu projeto — Rita Maciel', 'Conte sobre seu negócio e solicite uma proposta para seu site ou landing page. Fale diretamente com Rita Maciel.'), component: Contact });
+export const Route = createFileRoute('/contato')({ validateSearch: (search: Record<string, unknown>): { nicho?: string } => typeof search['nicho']==='string' ? { nicho: search['nicho'] } : {}, head: () => pageHead('Contato | Vamos criar seu projeto — CELEREWEB', 'Conte sobre seu negócio e solicite uma proposta para seu site ou landing page. Fale diretamente com a CELEREWEB.'), component: Contact });
 function Contact() {
  const { nicho = '' }=Route.useSearch();
  const submit=useServerFn(submitContact);
