@@ -11,3 +11,4 @@
 
 - [x] Domain celereweb.com.br (HostGator, www as CNAME) noted but not connected: the connect card was closed twice and the follow-up question was skipped, so DNS was never changed. Site is still unpublished — publishing is the prerequisite for the domain to serve content.
 - [x] Activate WhatsApp links using the owner's supplied number.
+- [ ] DNS records for celereweb.com.br handed to the owner to add at HostGator (A 185.158.133.1 at @ plus the two _lovable TXT proofs); still waiting for them to be applied and re-checked.
