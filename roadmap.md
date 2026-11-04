@@ -11,4 +11,4 @@
 
 - [x] Domain celereweb.com.br (HostGator, www as CNAME) noted but not connected: the connect card was closed twice and the follow-up question was skipped, so DNS was never changed. Site is still unpublished — publishing is the prerequisite for the domain to serve content.
 - [x] Activate WhatsApp links using the owner's supplied number.
-- [ ] DNS records for celereweb.com.br handed to the owner to add at HostGator (A 185.158.133.1 at @ plus the two _lovable TXT proofs); still waiting for them to be applied and re-checked.
+- [ ] DNS for celereweb.com.br at HostGator: `_lovable.www` TXT is live (verified). Still missing: delete the old `www` CNAME (it points to the misspelled `www.celeweb.com.br`) and add A `www` -> 185.158.133.1; add A `@` -> 185.158.133.1 and TXT `_lovable` -> lovable_verify=11488cf452a70c9358d80824281f9bce71d70f307513e53238a57f51667ff1a8. Keep the `ftp` CNAME untouched.
