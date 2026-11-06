@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  useLocation,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
@@ -116,12 +117,15 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const { pathname } = useLocation();
+  // /lp is a standalone ads landing page: no site nav, no footer, no floating button.
+  const isAdsPage = pathname === '/lp' || pathname.startsWith('/lp/');
 
   return (
     <QueryClientProvider client={queryClient}>
-      <PortfolioHeader />
+      {!isAdsPage && <PortfolioHeader />}
       <Outlet />
-      <PortfolioFooter />
+      {!isAdsPage && <PortfolioFooter />}
       <ScrollReveal />
     </QueryClientProvider>
   );
