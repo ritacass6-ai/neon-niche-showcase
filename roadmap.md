@@ -13,3 +13,6 @@
 - [x] Activate WhatsApp links using the owner's supplied number.
 - [x] Hide the "Edit with Lovable" badge on the published site (2026-11-04).
 - [x] DNS for celereweb.com.br at HostGator — all 4 records saved on HostGator (2026-11-04); waiting on propagation/SSL. Earlier notes: www is done (CNAME removed, A `www` -> 185.158.133.1 live, `_lovable.www` TXT live). Root A `celereweb.com.br.` -> 185.158.133.1 is live. Still missing (not present even on HostGator's own nameserver): TXT `_lovable` -> lovable_verify=11488cf452a70c9358d80824281f9bce71d70f307513e53238a57f51667ff1a8. Keep SPF/DMARC/DKIM TXT records.
+
+- [ ] Create 10 promo images (/mnt/documents/marketing/images).
+- [ ] Create 5 motion-graphics videos (/mnt/documents/videos).
