@@ -36,5 +36,5 @@ export const contactSchema = z.object({
   website: z.string().max(0).optional(),
 });
 export function pageHead(title: string, description: string, image?: string, options?: { noindex?: boolean }) {
-  return { meta: [{ title }, { name: 'description', content: description }, ...(options?.noindex ? [{ name: 'robots', content: 'noindex, follow' }] : []), { property: 'og:title', content: title }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }, ...(image?.startsWith('https://') ? [{ property: 'og:image', content: image }, { name: 'twitter:image', content: image }] : [])] };
+  return { meta: [{ title }, { name: 'description', content: description }, ...(options?.noindex ? [{ name: 'robots', content: 'noindex, follow' }] : []), { property: 'og:title', content: title }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { property: 'og:site_name', content: 'CELEREWEB' }, { name: 'twitter:card', content: 'summary_large_image' }, ...(image?.startsWith('https://') ? [{ property: 'og:image', content: image }, { name: 'twitter:image', content: image }] : [])] };
 }
