@@ -16,7 +16,7 @@ export const Route = createFileRoute('/lp')({
 });
 
 const videos = [videoOferta, videoNichos, videoBeneficios, videoProcesso, videoWhatsapp];
-const photos = ['Jurídico & Advocacia', 'Contabilidade & Finanças', 'Mercado Imobiliário', 'Logística & Transportadoras', 'Arquitetura & Design', 'Clínicas & Médicos', 'Academias & Personal Trainers', 'Pet Shops & Veterinárias', 'Comércio Local & Varejo', 'Gastronomia'].map(name => nicheImages[name]);
+const photos = ['Jurídico & Advocacia', 'Contabilidade & Finanças', 'Mercado Imobiliário', 'Logística & Transportadoras', 'Arquitetura & Design', 'Clínicas & Médicos', 'Academias & Personal Trainers', 'Pet Shops & Veterinárias', 'Comércio Local & Varejo', 'Gastronomia'].map(name => nicheImages[name]!);
 
 const faqs = [
   { q: 'Quanto tempo demora?', a: 'Landing pages ficam prontas em poucos dias e sites institucionais em poucas semanas. Nosso processo moderno, acelerado por inteligência artificial, coloca seu projeto no ar em tempo recorde — sem abrir mão da qualidade.' },
@@ -82,7 +82,7 @@ function LandingPage() {
             </div>
           </div>
           <div className="lp-service-card">
-            <div className="solution-photo"><img src={nicheImages['Infoprodutores & Palestrantes'].url} alt={nicheImages['Infoprodutores & Palestrantes'].alt} loading="lazy" /></div>
+            <div className="solution-photo"><img src={nicheImages['Infoprodutores & Palestrantes']!.url} alt={nicheImages['Infoprodutores & Palestrantes']!.alt} loading="lazy" /></div>
             <div className="solution-body">
               <Building2 />
               <h3>Sites Institucionais</h3>
