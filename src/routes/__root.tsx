@@ -84,6 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Sites e landing pages com estratégia, design e tecnologia." },
       { name: "author", content: "CELEREWEB" },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "CELEREWEB" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -92,7 +93,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "apple-touch-icon", type: "image/png", href: "/apple-touch-icon.png" },
     ],
   }),
   shellComponent: RootShell,
