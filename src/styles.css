@@ -129,3 +129,16 @@ h1,h2,h3,h4 { font-family:var(--font-display); letter-spacing:0; } a { text-deco
 .lp-final-cta a { height:52px; padding:0 30px; font-size:13px; }
 @media(max-width:900px) { .lp-hero-inner { grid-template-columns:1fr; gap:38px; } .lp-hero h1 { font-size:40px; } .lp-hero-video { margin:0 auto; } .lp-pain-grid,.lp-feature-grid { grid-template-columns:1fr; gap:16px; } .lp-service-grid { grid-template-columns:1fr; } .lp-video-grid { grid-template-columns:repeat(3,1fr); } .lp-photo-grid { grid-template-columns:repeat(3,1fr); } }
 @media(max-width:600px) { .lp-hero { margin-top:72px; padding:55px 0 50px; } .lp-hero h1 { font-size:30px; } .lp-center-heading h2 { font-size:26px; } .lp-video-grid { grid-template-columns:repeat(2,1fr); gap:12px; } .lp-photo-grid { grid-template-columns:repeat(2,1fr); gap:12px; } .lp-final-cta h2 { font-size:28px; } }
+
+/* ===== LP: standalone ads landing page ===== */
+.lp-bar { position:fixed; top:0; left:0; width:100%; z-index:50; height:64px; display:flex; align-items:center; background:var(--header-surface); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); }
+.lp-bar-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; width:100%; }
+.lp-bar .brand-name { font-size:19px; }
+.lp-bar .brand-caption { font-size:8px; }
+.lp-bar-cta { height:38px; padding:0 17px; font-size:11px; }
+.lp-hero-trust { display:flex; flex-wrap:wrap; gap:20px; margin-top:26px; color:var(--muted-foreground); font-size:11px; }
+.lp-hero-trust span { display:flex; gap:7px; align-items:center; }
+.lp-hero-trust svg { width:14px; color:var(--cyan); }
+.lp-sticky { position:fixed; left:0; right:0; bottom:0; z-index:45; display:none; padding:10px 16px calc(10px + env(safe-area-inset-bottom)); background:oklch(.14 .01 250 / .94); backdrop-filter:blur(12px); border-top:1px solid var(--border); }
+.lp-sticky a { width:100%; height:48px; font-size:13px; }
+@media(max-width:600px) { .lp-hero { margin-top:64px; } .lp-bar-cta { display:none; } .lp-sticky { display:block; } .lp-final-cta { padding-bottom:96px; } }

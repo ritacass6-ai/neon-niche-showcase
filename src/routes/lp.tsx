@@ -2,7 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { useState } from 'react';
 import { ArrowUpRight, ChevronDown, Instagram, SearchX, Link2Off, Zap, Smartphone, Rocket, MousePointerClick, Building2, Play, MessageCircle, CodeXml, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { pageHead, whatsappUrl } from '@/lib/portfolio';
+import { pageHead } from '@/lib/portfolio';
 import { nicheImages, customProjectImage } from '@/lib/niche-images';
 import videoOferta from '@/assets/videos/celereweb-oferta-sites-que-vendem.mp4.asset.json';
 import videoNichos from '@/assets/videos/celereweb-15-nichos.mp4.asset.json';
