@@ -35,6 +35,6 @@ export const contactSchema = z.object({
   mensagem: z.string().trim().min(10, 'Conte um pouco mais sobre seu projeto (mínimo de 10 caracteres).').max(2000),
   website: z.string().max(0).optional(),
 });
-export function pageHead(title: string, description: string, image?: string) {
-  return { meta: [{ title }, { name: 'description', content: description }, { property: 'og:title', content: title }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }, ...(image?.startsWith('https://') ? [{ property: 'og:image', content: image }, { name: 'twitter:image', content: image }] : [])] };
+export function pageHead(title: string, description: string, image?: string, options?: { noindex?: boolean }) {
+  return { meta: [{ title }, { name: 'description', content: description }, ...(options?.noindex ? [{ name: 'robots', content: 'noindex, follow' }] : []), { property: 'og:title', content: title }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }, ...(image?.startsWith('https://') ? [{ property: 'og:image', content: image }, { name: 'twitter:image', content: image }] : [])] };
 }

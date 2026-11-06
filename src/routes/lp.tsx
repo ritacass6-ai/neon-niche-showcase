@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { useState } from 'react';
-import { ArrowUpRight, ChevronDown, Instagram, SearchX, Link2Off, Zap, Smartphone, Rocket, MousePointerClick, Building2, Play, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, Instagram, SearchX, Link2Off, Zap, Smartphone, Rocket, MousePointerClick, Building2, Play, MessageCircle, CodeXml, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { pageHead, whatsappUrl } from '@/lib/portfolio';
+import { pageHead } from '@/lib/portfolio';
 import { nicheImages, customProjectImage } from '@/lib/niche-images';
 import videoOferta from '@/assets/videos/celereweb-oferta-sites-que-vendem.mp4.asset.json';
 import videoNichos from '@/assets/videos/celereweb-15-nichos.mp4.asset.json';
@@ -16,9 +16,14 @@ import posterProcesso from '@/assets/videos/celereweb-processo-acelerado-por-ia-
 import posterWhatsapp from '@/assets/videos/celereweb-fale-pelo-whatsapp-poster.jpg.asset.json';
 
 export const Route = createFileRoute('/lp')({
-  head: () => pageHead('CELEREWEB | Coloque sua empresa no Google com um site profissional', 'Desenvolvemos Landing Pages e Sites Institucionais sob medida para o seu negócio atrair mais clientes e fechar mais contratos.'),
+  head: () => pageHead('CELEREWEB | Coloque sua empresa no Google com um site profissional', 'Desenvolvemos Landing Pages e Sites Institucionais sob medida para o seu negócio atrair mais clientes e fechar mais contratos.', undefined, { noindex: true }),
   component: LandingPage,
 });
+
+const wa = (message: string) => 'https://wa.me/5521980473591?text=' + encodeURIComponent(message);
+const lpWhatsapp = wa('Olá! Vim pela página da CELEREWEB e quero um orçamento gratuito para meu negócio.');
+const lpWhatsappLanding = wa('Olá! Quero uma Landing Page de vendas para meu negócio. Pode me enviar um orçamento?');
+const lpWhatsappInstitucional = wa('Olá! Quero um Site Institucional para minha empresa. Pode me enviar um orçamento?');
 
 const videos = [
   { video: videoOferta, poster: posterOferta },
@@ -40,6 +45,11 @@ const faqs = [
 function LandingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   return <main className="lp">
+    <div className="lp-bar"><div className="container-page lp-bar-inner">
+      <Link to="/" className="brand" aria-label="CELEREWEB — Home"><CodeXml className="brand-symbol" size={28} /><div><div className="brand-name">CELEREWEB</div><div className="brand-caption">Desenvolvedora web</div></div></Link>
+      <Button asChild variant="premium" className="lp-bar-cta"><a href={lpWhatsapp} target="_blank" rel="noopener noreferrer">Orçamento gratuito</a></Button>
+    </div></div>
+
     <section className="lp-hero">
       <div className="container-page lp-hero-inner reveal">
         <div className="lp-hero-copy">
@@ -47,7 +57,12 @@ function LandingPage() {
           <h1>Coloque sua empresa no Google com um site profissional de <span className="gradient-text">alta performance.</span></h1>
           <p className="lp-hero-sub">Desenvolvemos Landing Pages e Sites Institucionais sob medida para o seu negócio atrair mais clientes e fechar mais contratos.</p>
           <div className="hero-actions">
-            <Button asChild variant="premium" size="lg" className="lp-glow"><Link to="/contato">Quero um Orçamento Gratuito <ArrowUpRight /></Link></Button>
+            <Button asChild variant="premium" size="lg" className="lp-glow"><a href={lpWhatsapp} target="_blank" rel="noopener noreferrer">Quero um Orçamento Gratuito <ArrowUpRight /></a></Button>
+          </div>
+          <div className="lp-hero-trust">
+            <span><CheckCircle2 /> Resposta em até 1 dia útil</span>
+            <span><CheckCircle2 /> Sem compromisso</span>
+            <span><CheckCircle2 /> O site é 100% seu</span>
           </div>
         </div>
         <div className="lp-hero-video">
@@ -89,7 +104,7 @@ function LandingPage() {
               <MousePointerClick />
               <h3>Landing Pages (Páginas de Vendas)</h3>
               <p>Focadas 100% em conversão e anúncios. Uma página direta, rápida e persuasiva para transformar visitantes em pedidos de orçamento.</p>
-              <Button asChild variant="glass"><Link to="/contato">Quero uma landing page <ArrowUpRight /></Link></Button>
+              <Button asChild variant="glass"><a href={lpWhatsappLanding} target="_blank" rel="noopener noreferrer">Quero uma landing page <ArrowUpRight /></a></Button>
             </div>
           </div>
           <div className="lp-service-card">
@@ -98,7 +113,7 @@ function LandingPage() {
               <Building2 />
               <h3>Sites Institucionais</h3>
               <p>Estruturas completas para gerar autoridade no Google. Apresente seus serviços, sua história e conquiste a confiança de quem ainda não te conhece.</p>
-              <Button asChild variant="glass"><Link to="/contato">Quero um site institucional <ArrowUpRight /></Link></Button>
+              <Button asChild variant="glass"><a href={lpWhatsappInstitucional} target="_blank" rel="noopener noreferrer">Quero um site institucional <ArrowUpRight /></a></Button>
             </div>
           </div>
         </div>
@@ -164,8 +179,10 @@ function LandingPage() {
       <div className="container-page">
         <h2>Pronto para dar o <span className="gradient-text">próximo passo?</span></h2>
         <p>Fale agora com quem vai desenvolver o seu site. Orçamento gratuito, sem compromisso.</p>
-        <Button asChild variant="whatsapp" size="lg" className="lp-glow"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Falar com Desenvolvedor no WhatsApp <MessageCircle /></a></Button>
+        <Button asChild variant="whatsapp" size="lg" className="lp-glow"><a href={lpWhatsapp} target="_blank" rel="noopener noreferrer">Falar com Desenvolvedor no WhatsApp <MessageCircle /></a></Button>
       </div>
     </section>
+
+    <div className="lp-sticky"><Button asChild variant="whatsapp" size="lg"><a href={lpWhatsapp} target="_blank" rel="noopener noreferrer">Falar no WhatsApp <MessageCircle /></a></Button></div>
   </main>;
 }
