@@ -51,7 +51,7 @@ function LandingPage() {
           </div>
         </div>
         <div className="lp-hero-video">
-          <video src={videoOferta.url} autoPlay muted loop playsInline preload="metadata" aria-label="Vídeo apresentando os sites desenvolvidos pela CELEREWEB" />
+          <video src={videoOferta.url} poster={posterOferta.url} autoPlay muted loop playsInline preload="metadata" aria-label="Vídeo apresentando os sites desenvolvidos pela CELEREWEB" />
           <div className="lp-video-badge"><Play size={11} /> Veja nosso trabalho</div>
         </div>
       </div>
@@ -131,8 +131,8 @@ function LandingPage() {
           <p className="section-intro">Projetos recentes desenvolvidos com tecnologia de ponta.</p>
         </div>
         <div className="lp-video-grid">
-          {videos.map((video, index) => <div className="lp-video-card" key={video.url}>
-            <video src={video.url} muted loop playsInline preload="metadata" aria-label={`Vídeo de apresentação ${index + 1} da CELEREWEB`} onMouseEnter={event => event.currentTarget.play()} onMouseLeave={event => event.currentTarget.pause()} />
+          {videos.map((item, index) => <div className="lp-video-card" key={item.video.url}>
+            <video src={item.video.url} poster={item.poster.url} muted loop playsInline preload="none" aria-label={`Vídeo de apresentação ${index + 1} da CELEREWEB`} onMouseEnter={event => event.currentTarget.play()} onMouseLeave={event => event.currentTarget.pause()} />
           </div>)}
         </div>
         <div className="lp-photo-grid">
