@@ -9,13 +9,24 @@ import videoNichos from '@/assets/videos/celereweb-15-nichos.mp4.asset.json';
 import videoBeneficios from '@/assets/videos/celereweb-beneficios.mp4.asset.json';
 import videoProcesso from '@/assets/videos/celereweb-processo-acelerado-por-ia.mp4.asset.json';
 import videoWhatsapp from '@/assets/videos/celereweb-fale-pelo-whatsapp.mp4.asset.json';
+import posterOferta from '@/assets/videos/celereweb-oferta-sites-que-vendem-poster.jpg.asset.json';
+import posterNichos from '@/assets/videos/celereweb-15-nichos-poster.jpg.asset.json';
+import posterBeneficios from '@/assets/videos/celereweb-beneficios-poster.jpg.asset.json';
+import posterProcesso from '@/assets/videos/celereweb-processo-acelerado-por-ia-poster.jpg.asset.json';
+import posterWhatsapp from '@/assets/videos/celereweb-fale-pelo-whatsapp-poster.jpg.asset.json';
 
 export const Route = createFileRoute('/lp')({
   head: () => pageHead('CELEREWEB | Coloque sua empresa no Google com um site profissional', 'Desenvolvemos Landing Pages e Sites Institucionais sob medida para o seu negócio atrair mais clientes e fechar mais contratos.'),
   component: LandingPage,
 });
 
-const videos = [videoOferta, videoNichos, videoBeneficios, videoProcesso, videoWhatsapp];
+const videos = [
+  { video: videoOferta, poster: posterOferta },
+  { video: videoNichos, poster: posterNichos },
+  { video: videoBeneficios, poster: posterBeneficios },
+  { video: videoProcesso, poster: posterProcesso },
+  { video: videoWhatsapp, poster: posterWhatsapp },
+];
 const photos = ['Jurídico & Advocacia', 'Contabilidade & Finanças', 'Mercado Imobiliário', 'Logística & Transportadoras', 'Arquitetura & Design', 'Clínicas & Médicos', 'Academias & Personal Trainers', 'Pet Shops & Veterinárias', 'Comércio Local & Varejo', 'Gastronomia'].map(name => nicheImages[name]!);
 
 const faqs = [
