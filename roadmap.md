@@ -19,4 +19,5 @@
 - [x] Landing page /lp as standalone ads page (2026-11-06): site nav/footer/floating button hidden on /lp, own slim brand bar + mobile sticky WhatsApp bar, all CTAs open WhatsApp with preset messages, noindex so it does not compete with the main site in Google. Main site (/) keeps its header, footer and floating button.
 - [ ] Publish -> Atualizar so the new Mercado Imobiliário photo, the CELEREWEB page titles and the /lp landing page go live on celereweb.com.br.
 - [x] Create 3 more motion-graphics videos for social/WhatsApp (divulgação geral, nichos destaque, chamada WhatsApp) -> /mnt/documents/videos.
+- [x] Create 6 more social images, set 2 (files 17-22) in /mnt/documents/marketing/images: annotated niche-cards capture, 2x2 niche catalogue (cool-graded), "O site é 100% seu." typographic, phone capture + 3 benefit lines, "Orçamento gratuito" note card, text-free workspace shot.
 
