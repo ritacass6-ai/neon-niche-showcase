@@ -20,4 +20,5 @@
 - [ ] Publish -> Atualizar so the new Mercado Imobiliário photo, the CELEREWEB page titles and the /lp landing page go live on celereweb.com.br.
 - [x] Create 3 more motion-graphics videos for social/WhatsApp (divulgação geral, nichos destaque, chamada WhatsApp) -> /mnt/documents/videos.
 - [x] Create 6 more social images, set 2 (files 17-22) in /mnt/documents/marketing/images: annotated niche-cards capture, 2x2 niche catalogue (cool-graded), "O site é 100% seu." typographic, phone capture + 3 benefit lines, "Orçamento gratuito" note card, text-free workspace shot.
+- [x] Create four short Reels videos with CELEREWEB branding and a WhatsApp button; delivered to /mnt/documents/videos (10 seconds each, portrait 1080×1920, music, frames and audio checked).
 
