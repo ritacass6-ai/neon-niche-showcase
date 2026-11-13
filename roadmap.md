@@ -21,4 +21,5 @@
 - [x] Create 3 more motion-graphics videos for social/WhatsApp (divulgação geral, nichos destaque, chamada WhatsApp) -> /mnt/documents/videos.
 - [x] Create 6 more social images, set 2 (files 17-22) in /mnt/documents/marketing/images: annotated niche-cards capture, 2x2 niche catalogue (cool-graded), "O site é 100% seu." typographic, phone capture + 3 benefit lines, "Orçamento gratuito" note card, text-free workspace shot.
 - [x] Create four short Reels videos with CELEREWEB branding and a WhatsApp button; delivered to /mnt/documents/videos (10 seconds each, portrait 1080×1920, music, frames and audio checked).
+- [x] Create five Instagram carousels with four slides each, approved Portuguese phrases, CELEREWEB and WhatsApp contact; delivered as ordered 1080×1350 images.
 
