@@ -27,4 +27,5 @@
 - [x] Create another 10 bizarre 3D-cartoon humor images, portrait 4:5 (octopus dentist, grandma ironing phone, computer tricycle, toilet fishing, ballerina gorilla, laptop oven, app laundry, cable hair dryer, alien vacuum, muscular laptop); visually inspected and saved to Files.
 - [x] Create 10 new bizarre 3D-cartoon images with funny Portuguese captions only (no brand/contact), portrait 4:5; inspect every image and caption and group in Humor digital.
 - [x] Create ten 10-second vertical humor videos: bizarre-color comedy for 0–5 seconds, CELEREWEB speed and WhatsApp for 5–10 seconds; all 1080×1920 with music, rendered frames/contact details checked and grouped in “CELEREWEB — 10 Reels de humor”; chats are illustrative and WhatsApp buttons are not clickable.
+- [ ] Create five new professional motion-graphics videos for CELEREWEB, without repeating previous themes; inspect all outputs and group them in Files.
 
