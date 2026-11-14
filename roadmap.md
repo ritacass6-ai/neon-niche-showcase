@@ -25,4 +25,5 @@
 - [x] Create 3 funny 3D-cartoon images with bizarre colors, no text, portrait 4:5 (avalanche de mensagens, site mais lento que vovô, hamsters consertando site) -> /mnt/documents/humor-digital/images.
 - [x] Create 10 more funny 3D-cartoon images, same style, no text, portrait 4:5 (barco de notificações, esqueleto esperando site, celular explodindo, gato webdesigner, megafone vs imã, enrolado em cabos, monstro 404, jonglando celulares, caracol na linha de chegada, cérebro derretendo) -> /mnt/documents/humor-digital/images; all 13 grouped in collection "CELEREWEB — Humor digital".
 - [x] Create another 10 bizarre 3D-cartoon humor images, portrait 4:5 (octopus dentist, grandma ironing phone, computer tricycle, toilet fishing, ballerina gorilla, laptop oven, app laundry, cable hair dryer, alien vacuum, muscular laptop); visually inspected and saved to Files.
+- [x] Create 10 new bizarre 3D-cartoon images with funny Portuguese captions only (no brand/contact), portrait 4:5; inspect every image and caption and group in Humor digital.
 
